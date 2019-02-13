@@ -2,6 +2,11 @@ import 'package:flutter/material.dart';
 import '../DashboardScreen.dart' as dashBoardObj;
 
 class Home extends StatefulWidget {
+
+  final Function onTapped;  // CallBack Function
+
+  Home({this.onTapped});
+
   @override
   _HomeState createState() => _HomeState();
 }
@@ -127,19 +132,7 @@ class _HomeState extends State<Home> {
                   textColor: Colors.white,
                   onPressed: () {
                     setState(() {
-
-                      /**
-                       *
-                       *
-                       *
-                       * on click of this button it navigate to next page or any other page as per given input
-                       *
-                       */
-                      dashBoardObj.DashboardScreen d =
-                          new dashBoardObj.DashboardScreen();
-                      d.createState().pageController.animateToPage(2,
-                          duration: Duration(milliseconds: 300),
-                          curve: Cubic(1, 1, 1, 1));
+                      widget.onTapped(1);
                     });
                   }),
             ),

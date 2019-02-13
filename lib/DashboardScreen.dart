@@ -66,7 +66,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
       body: pageView= new PageView(
           physics:new NeverScrollableScrollPhysics(),
           children: [
-            Home(),
+            Home(onTapped: onTabTapped),
             Meetings(),
             DirectVisit(),
             Bussiness(),

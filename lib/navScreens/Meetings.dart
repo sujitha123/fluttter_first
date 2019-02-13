@@ -14,13 +14,18 @@ class _MeetingsState extends State<Meetings> {
   void initState() {
     // TODO: implement initState
     super.initState();
-    _textEditingController.text=DateFormat('dd-MM-yyyy').format(DateTime.now());
+    _textEditingController.text =
+        DateFormat('dd-MM-yyyy').format(DateTime.now());
   }
 
   @override
   Widget build(BuildContext context) {
-
     return Scaffold(
+      floatingActionButton: FloatingActionButton(
+          child: Icon(Icons.add),
+          onPressed: () {
+            print('-------floacting action-click----------');
+          }),
       body: Container(
         padding: EdgeInsets.only(top: 5, bottom: 5, left: 5, right: 5),
         child: Column(
