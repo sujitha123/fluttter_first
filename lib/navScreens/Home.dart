@@ -127,8 +127,14 @@ class _HomeState extends State<Home> {
                   textColor: Colors.white,
                   onPressed: () {
                     setState(() {
-                      print(
-                          '----dddddddddd------------clicked----------------');
+
+                      /**
+                       *
+                       *
+                       *
+                       * on click of this button it navigate to next page or any other page as per given input
+                       *
+                       */
                       dashBoardObj.DashboardScreen d =
                           new dashBoardObj.DashboardScreen();
                       d.createState().pageController.animateToPage(2,
